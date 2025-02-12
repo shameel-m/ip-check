@@ -3,24 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ip website</title>
+    <title>IP Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!--------------------------------------- Nav ---------------------------------------->
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="location.html">Contact</a></li>
-            <li><a href="disclaimer.html">Disclaimer</a></li>
-            <li><a href="https://github.com/shameel-m/ip-check">Github</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="location.html">Contact</a></li>
+                <li><a href="https://github.com/shameel-m/ip-check">Github</a></li>
+            </ul>
+            <div class="theme-switch">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
     </nav>
-    <!--------------------------------------- ip copy ------------------------------------>
-    <!--------------------------------------- ip paste and location ---------------------->
-    <!--------------------------------------- disclaimer --------------------------------->
-    <!--------------------------------------- contact ------------------------------------>
-    <!--------------------------------------- footer ------------------------------------->
 
+    <!--------------------------------------- IP Copy ------------------------------------>
+    <section id="ip-section">
+        <h2>Your IP Information</h2>
+        <p id="ip-address">IP: xxx.xx.xxx.xxx</p>
+        <button id="copy-ip">Copy IP</button>
+    </section>
+
+    <!--------------------------------------- IP Paste and Location ---------------------->
+    <section id="location-section">
+        <h2>Predict Location from IP</h2>
+        <input type="text" id="ip-input" placeholder="Paste IP here">
+        <button id="predict-location">Predict Location</button>
+        <p id="disclaimer">This tool provides an approximate location based on the IP address. It may not be precise.</p>
+    </section>
+
+    <!--------------------------------------- Disclaimer --------------------------------->
+
+    <!--------------------------------------- Contact ------------------------------------>
+
+    <!--------------------------------------- Footer ------------------------------------->
+    <footer>
+        <p>&copy; 2023 IP Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('dark-mode');
+        });
+    </script>
 </body>
 </html>
